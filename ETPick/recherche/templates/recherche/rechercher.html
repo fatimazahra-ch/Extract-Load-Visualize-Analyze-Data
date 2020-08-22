@@ -1,0 +1,113 @@
+{% extends "base.html" %}
+{% load static %}
+{% block table %}
+  <div class="row">
+    <div class="col">
+      <div class="card shadow">
+        <div class="card-header border-0">
+          <span class="mb-0">
+            Recruiters use the following search table to pick the most suitable candidate from his social networks
+          </span> 
+        </div>
+        <form action="candidate" method="GET">
+          <div class="table-responsive">             
+            <table class="table align-items-center table-flush">
+              <thead class="thead-light">
+                <tr>
+                  <th scope="col">Media</th>
+                  <th scope="col"></th>
+                  <th scope="col"></th>
+                  <th scope="col">Name</th>
+                  <th scope="col"></th>
+                  <th scope="col"></th>
+                </tr>
+              </thead>                
+              <tbody>
+                <tr>
+                  <th scope="row">
+                    <div class="media align-items-center">
+                      <a href="#" class="avatar rounded-circle mr-3">
+                        <img alt="Image placeholder" height="65px"  src="{% static 'img/theme/face.PNG' %}">
+                      </a>
+                      <div class="media-body">
+                        <span class="mb-0 text-sm">Facebook</span>
+                      </div>
+                    </div>
+                  </th>
+                  <td></td> 
+                  <td></td>                               
+                  <td>
+                      <input type="text" class="form-control form-control-flush" name="facebook_name" placeholder="Name of the candidate" required="true">
+                  </td>
+                  <td></td>                    
+                  <td class="text-right">
+                    <div class="dropdown">
+                      <a class="btn btn-sm btn-icon-only text-light" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        <i class="fas fa-ellipsis-v"></i>
+                      </a>
+                    </div>
+                  </td>
+                </tr>
+                <tr>
+                  <th scope="row">
+                    <div class="media align-items-center">
+                      <a href="#" class="avatar rounded-circle mr-3">
+                        <img alt="Image placeholder"  height="65px" src="{% static 'img/theme/linkdin.png' %}">
+                      </a>
+                      <div class="media-body">
+                        <span class="mb-0 text-sm">Linkdin</span>
+                      </div>
+                    </div>
+                  </th>
+                  <td></td> 
+                  <td></td>                               
+                  <td>
+                      <input type="text" class="form-control form-control-flush" name="linkdin_name" placeholder="Name of the candidate" required="true">
+                  </td>
+                  <td></td>                    
+                  <td class="text-right">
+                    <div class="dropdown">
+                      <a class="btn btn-sm btn-icon-only text-light" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        <i class="fas fa-ellipsis-v"></i>
+                      </a>
+                    </div>
+                  </td>
+                </tr>
+                <tr>
+                  <th scope="row">
+                    <div class="media align-items-center">
+                      <a href="#" class="avatar rounded-circle mr-3">
+                        <img alt="Image placeholder" src="{% static 'img/theme/twitter.PNG' %}">
+                      </a>
+                      <div class="media-body">
+                        <span class="mb-0 text-sm">Twitter</span>
+                      </div>
+                    </div>
+                  </th>
+                  <td></td> 
+                  <td></td>                               
+                  <td>
+                      <input type="text" class="form-control form-control-flush" name="twitter_name" placeholder="Name of the candidate" required="true">
+                  </td>
+                  <td></td>                    
+                  <td class="text-right">
+                    <div class="dropdown">
+                      <a class="btn btn-sm btn-icon-only text-light" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        <i class="fas fa-ellipsis-v"></i>
+                      </a>
+                    </div>
+                  </td>
+                </tr>           
+              </tbody>
+            </table>             
+          </div>
+          <div class="card-footer py-4">
+            <nav aria-label="...">
+              <input type="submit" name="submit" value="Search" class="btn btn-outline-primary" aria-pressed="true">
+            </nav>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div> 
+{% endblock %} 
